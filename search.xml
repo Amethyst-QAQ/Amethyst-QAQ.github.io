@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>服务器基础知识</title>
+      <link href="/2021/09/14/fwqjczs/"/>
+      <url>/2021/09/14/fwqjczs/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="/style/code.css"><script id="MathJax-script" async src="https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js"></script><h2 id="一、-服务器是什么"><a href="#一、-服务器是什么" class="headerlink" title="一、 服务器是什么"></a>一、 服务器是什么</h2><ul><li><p>服务器就是在网络中为其他客户机提供服务的计算机</p></li><li><p>服务器的组成：</p><ul><li>可配置部件：CPU、内存、硬盘、RAID卡、网卡</li><li>基础硬件：主板、机箱、电源、风扇等</li><li>管理：BMC带外管理系统</li></ul></li><li>分类<ul><li>按照外形分类：塔式服务器→机架服务器→刀片服务器→高密服务器</li><li>按照指令集分类：CISC（复杂指令集）、RISC（精密指令集）</li><li>按照处理器分类：单路服务器、双路服务器、多路服务器</li><li>按照负载类型分类：数据库服务器、应用服务器、接入服务器、Web服务器、文件服务器</li></ul></li><li>服务器应用部署架构：<ul><li>单机系统</li><li>B/S架构</li><li>C/S架构</li><li>互联网架构</li></ul></li></ul><h2 id="二、服务器的操作系统"><a href="#二、服务器的操作系统" class="headerlink" title="二、服务器的操作系统"></a>二、服务器的操作系统</h2><ul><li>Window：操作简单、系统成本较高、安全性相对较低、能承受的访问量较低；使用图形界面进行操作，对各种服务器软件功能配置便捷</li><li>Unix/Linux：成本较低、性能极高、稳定性很好、安全；目前，大多数中大型企业（包括Google、百度、新浪、搜狐等）的服务器都运行在Linux系统上（后续会进行系统、完整的学习）</li></ul><h2 id="三、网络服务器的作用"><a href="#三、网络服务器的作用" class="headerlink" title="三、网络服务器的作用"></a>三、网络服务器的作用</h2><ul><li>运行网络操作系统。通过网络操作系统控制和协调网络各工作站的运行，处理和响应各工作站同时发来的各种网络操作请求。</li><li>存储和管理网络中的软硬件共享资源，如数据库、文件、应用程序、打印机等资源。</li><li>网络管理员在网络服务器上对各工作站的活动进行监视控制及调整。</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hello_world</title>
       <link href="/2021/09/14/hello-world/"/>
       <url>/2021/09/14/hello-world/</url>
