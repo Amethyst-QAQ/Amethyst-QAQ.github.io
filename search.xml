@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>hello_world</title>
+      <link href="/2021/09/14/hello-world/"/>
+      <url>/2021/09/14/hello-world/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="/style/code.css"><script id="MathJax-script" async src="https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js"></script><p>Hello world !!!</p><p><img src="https://i.loli.net/2021/09/14/6RwFjtiUAdkhn35.jpg" alt="v2-15f5d75d2090e8ca37cb564a8395b834_720w"></p><pre><code class="lang-c++">#include &lt;iostream&gt;using namespace std;int main()&#123;    return 0;&#125;</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
