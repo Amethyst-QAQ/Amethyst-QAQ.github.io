@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Linux操作系统了解</title>
+      <link href="/2021/09/15/LinuxIntroduction/"/>
+      <url>/2021/09/15/LinuxIntroduction/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="/style/code.css"><script id="MathJax-script" async src="https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js"></script><span id="more"></span><h1 id="Linux操作系统基础"><a href="#Linux操作系统基础" class="headerlink" title="Linux操作系统基础"></a>Linux操作系统基础</h1><h2 id="Linux简介"><a href="#Linux简介" class="headerlink" title="Linux简介"></a>Linux简介</h2><p>Linux是一种自由和开放源码的操作系统，存在着很多不同的Linux版本。Linux可安装在各种计算机硬件设备中，比如手机、平板电脑、路由器、台式计算机等</p><p>Linux的特点：多用户，多任务，丰富的网络功能，可靠的系统安全，良好的可移植性，具有标准兼容性，良好的用户界面，出色的速度性能，且是开源的</p><h2 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h2><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p><img src="https://i.loli.net/2021/09/15/Fmxlcz7JiauZ5vW.png" alt="Linux目录结构"></p><ul><li>bin（binaries）存放二进制可执行文件</li><li>sbin（super user binaries）存放二进制可执行文件，只有root才能访问</li><li>etc（etcetera）存放系统配置文件</li><li>usr （unix shared resources）用于存放共享的系统资源</li><li>home 存放用户文件的根目录</li><li>root 超级用户目录</li><li>dev （devices）用于存放设备文件</li><li>lib （library）存放跟文件系统中的程序运行所需要的共享库及内核模块</li><li>mnt （mount）系统管理员安装临时文件系统的安装点</li><li>boot 存放用于系统引导时使用的各种文件</li><li>tmp（temporary）用于存放各种临时文件</li><li>var（variable）用于存放运行是需要改变数据的文件</li></ul><h3 id="Linux命令-1"><a href="#Linux命令-1" class="headerlink" title="Linux命令"></a>Linux命令</h3><h4 id="命令分类"><a href="#命令分类" class="headerlink" title="命令分类"></a>命令分类</h4><p>命令格式：command  -options parameter</p><p>例如：</p><pre><code>ls -la /usr</code></pre><p>内部命令：属于Shell解析器的一部分</p><pre><code>cd            切换目录（change directory）pwd            显示当前工作目录（print working directory）help        帮助</code></pre><p>外部命令：独立于Shell解析器之外的文件程序</p><pre><code>ls            显示文件和目录列表（list）mkdir        创建目录（make directory）cp            复制文件或目录（copy）</code></pre><p> 查看帮助文档</p><pre><code>内部命令：-help + 命令        例：-help cd外部命令：-man + 命令        例：-man ls</code></pre><h4 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h4><pre><code>ls                查看当前文件夹下的内容           listpwd                查看当前所在文件夹            print work directorycd [目录名]      切换文件夹                     change directorytouch [文件名]      如果文件不存在，新建文件        touchmkdir[目录名]      创建目录                      make directorym[文件名]          删除指定文件                removeclear            清屏                         clear</code></pre><p>tips：</p><ul><li>ctrl + shift + = 放大终端窗口的字体显示</li><li>ctrl + - 缩小终端窗口的字体显示</li><li>输入文件/目录/命令的前几个字母之后，可以使用tab键自动补全：没有歧义会直接自动补全；有歧义时系统会提示可能存在的命令</li><li>上/下光标键可以在之前使用过的命令之间来回切换</li><li>ctrl + c 用于退出选择并停止执行当前命令</li></ul><h4 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h4><h5 id="查找文件"><a href="#查找文件" class="headerlink" title="查找文件"></a>查找文件</h5><p>find命令功能非常强大，通过用来在特定目录下搜索符合条件的文件（如果省略路径，表示在当前文件夹下查找）</p><pre><code>find [路径] -name “*.py”            查找指定路径下拓展名是.py的文件，包括子目录</code></pre><h5 id="软链接"><a href="#软链接" class="headerlink" title="软链接"></a>软链接</h5><p>（注意源文件要使用绝对路径，不能使用相对路径）</p><pre><code>ln -s 被链接的源文件 链接文件            建立文件的软链接（类似Windows下的快捷方式）</code></pre><h5 id="硬链接（了解即可）"><a href="#硬链接（了解即可）" class="headerlink" title="硬链接（了解即可）"></a>硬链接（了解即可）</h5><pre><code>ln 被链接的源文件 链接文件                建立硬链接文件，两个文件占用相同大小的硬盘空间</code></pre><p><img src="https://i.loli.net/2021/09/15/o6kgjKTsLtROAvr.png" alt="软链接硬链接"></p><p>P.S.    在Linux中，文件名和文件的数据是分开储存的</p><h5 id="打包压缩"><a href="#打包压缩" class="headerlink" title="打包压缩"></a>打包压缩</h5><p>Linux常用的打包压缩方式是tar.gz</p><pre><code># 打包文件tar -cvf 打包文件.tar 被打包的文件/路径# 解包文件tar -xvf 打包文件.tar</code></pre><p>tar选项说明：</p><pre><code>c            生成档案文件，创建打包文件x            解开档案文件v            列出归档解档的详细过程，显示进度f            指定档案文件名称，f后面一定是.tar文件，所以必须放选项最后</code></pre><h5 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h5><p>通过apt安装/卸载软件</p><ul><li>apt是指Advanced Packaging Tool，是Linux下的一款安装包管理工具</li><li>可以在终端中方便的安装/卸载/更新软件包</li></ul><pre><code># 安装软件sudo apt install 软件包# 卸载软件sudo apt remove 软件包# 更新已安装的包sudo apt upgrade</code></pre><p>未完待续…………</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>服务器基础知识</title>
       <link href="/2021/09/14/fwqjczs/"/>
       <url>/2021/09/14/fwqjczs/</url>
@@ -21,7 +34,7 @@
       <link href="/2021/09/14/hello-world/"/>
       <url>/2021/09/14/hello-world/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="/style/code.css"><script id="MathJax-script" async src="https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js"></script><p>Hello world !!!</p><p><img src="https://i.loli.net/2021/09/14/6RwFjtiUAdkhn35.jpg" alt="v2-15f5d75d2090e8ca37cb564a8395b834_720w"></p><pre><code class="lang-c++">#include &lt;iostream&gt;using namespace std;int main()&#123;    return 0;&#125;</code></pre>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="/style/code.css"><script id="MathJax-script" async src="https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js"></script><p>Hello world !!!</p><p><img src="https://i.loli.net/2021/09/14/6RwFjtiUAdkhn35.jpg" alt="v2-15f5d75d2090e8ca37cb564a8395b834_720w"></p><pre><code class="lang-c++">#include &lt;iostream&gt;using namespace std;int main()&#123;    //This is a test program.    return 0;&#125;</code></pre>]]></content>
       
       
       
